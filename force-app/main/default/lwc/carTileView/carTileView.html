@@ -1,0 +1,16 @@
+<template>
+    <lightning-card title="car Display" icon-name="standard:apps">
+        <div class="slds-p-around_medium wrapper">
+            <template if:true={carData.length}>
+                <div class="content">
+                    <template for:each={carData} for:item="car">
+                        <c-car-tile-child  key={car.Id} car-record={car} onimgclick={handleImgClicked}></c-car-tile-child>
+                    </template>
+                 </div>
+             </template>
+             <template if:false={carData.length}>
+                <c-place-holder display-text="No data found for this search result"></c-place-holder>
+             </template>
+        </div>
+    </lightning-card>
+</template>

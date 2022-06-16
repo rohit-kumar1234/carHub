@@ -1,0 +1,25 @@
+<aura:component 
+    implements="lightning:appHomeTemplate"
+    description="three column layout with size 2,7,3 for App Page"
+    access="global">
+
+    <aura:attribute name="left"   access="global" type="Aura.Component[]"/>
+    <aura:attribute name="center" access="global" type="Aura.Component[]"/>
+    <aura:attribute name="right"  access="global" type="Aura.Component[]"/>
+
+    <div aura:id="container">
+        <lightning:layout>
+            <lightning:layoutitem aura:id="leftColumn" size="2">
+                {!v.left}
+            </lightning:layoutitem>
+            <lightning:layoutItem aura:id="centerColumn" size="7" class="centerCss">
+                {!v.center}
+            </lightning:layoutItem>
+            <lightning:layoutItem aura:id="rightColumn" size="3" >
+                {!v.right}
+            </lightning:layoutItem>
+
+        </lightning:layout>
+    </div>
+
+</aura:component>	

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningMessageChannel xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Fire the Event when filter data changes</description>
+    <isExposed>false</isExposed>
+    <masterLabel>searchData</masterLabel>
+    <lightningMessageFields>
+        <description>filter data stored in this field</description>
+        <fieldName>lmsData</fieldName>
+        <fieldName>carId</fieldName>
+    </lightningMessageFields>
+</LightningMessageChannel>
+
